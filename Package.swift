@@ -60,7 +60,7 @@ let package = Package(
         .library(name: "GRDB-dynamic", type: .dynamic, targets: ["GRDB"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/jefflewis/swift-toolchain-sqlite", revision: "6b0b312"),
+        .package(url: "https://github.com/jefflewis/swift-toolchain-sqlite", revision: "a52c9ed"),
     ],
     targets: [
         // GRDB+SQLCipher: Delete the GRDBSQLite target
