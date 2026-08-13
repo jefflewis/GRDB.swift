@@ -1,0 +1,15 @@
+{
+  "originHash" : "2c4bada157992a1040f667f8c79c5666245391887c546ea9f1717f9aa770a6ac",
+  "pins" : [
+    {
+      "identity" : "swift-toolchain-sqlite",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jefflewis/swift-toolchain-sqlite",
+      "state" : {
+        "branch" : "6b0b312",
+        "revision" : "6b0b3123d19dc430859ff28dc5b3073613c0d495"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -59,12 +59,18 @@ let package = Package(
         .library(name: "GRDB", targets: ["GRDB"]),
         .library(name: "GRDB-dynamic", type: .dynamic, targets: ["GRDB"]),
     ],
-    dependencies: dependencies,
+    dependencies: [
+        .package(url: "https://github.com/jefflewis/swift-toolchain-sqlite", revision: "6b0b312"),
+    ],
     targets: [
         // GRDB+SQLCipher: Delete the GRDBSQLite target
-        .systemLibrary(
+        .target(
             name: "GRDBSQLite",
-            providers: [.apt(["libsqlite3-dev"])]),
+            dependencies: [
+                .product(name: "SwiftToolchainCSQLite", package: "swift-toolchain-sqlite"),
+            ],
+            path: "Sources/GRDBSQLite",
+            publicHeadersPath: "."),
         // GRDB+SQLCipher: Uncomment the GRDBSQLCipher target
         //.target(
         //    name: "GRDBSQLCipher",
